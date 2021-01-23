@@ -20,10 +20,10 @@
 </header>
 <div style="display: flex; justify-content: center;">
     <a class="crokuro-top-btn" href="/recruit/search/guild">
-        ギルド募集ツイート<br />件
+        ギルド募集ツイート<br />{{ $guild_count }}件
     </a>
     <a class="crokuro-top-btn" href="/recruit/search/member">
-        ギルメン募集ツイート<br />件
+        ギルメン募集ツイート<br />{{ $member_count }}件
     </a>
 </div>
 
