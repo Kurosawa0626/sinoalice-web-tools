@@ -17,10 +17,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/announce', function () {
-    return view('announce');
-});
+Route::get('announce', 'App\Http\Controllers\AnnounceController@index');
 
-Route::get('/recruit', function () {
-    return view('recruit');
-});
+Route::get('recruit', 'App\Http\Controllers\RecruitController@index');
+Route::get('recruit/search/{type}', 'App\Http\Controllers\RecruitController@search');
