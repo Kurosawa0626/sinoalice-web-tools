@@ -3,9 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tweet;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\Request;
 
 class RecruitController extends Controller
 {
+    /**
+     * @return Application|Factory|View
+     */
     public function index()
     {
         $guild = Tweet::guild()->count();
@@ -16,8 +23,14 @@ class RecruitController extends Controller
             ->with('member_count', $member);
     }
 
-    public function search($type)
+    /**
+     * @param string $type
+     * @param Request $request
+     * @return Application|Factory|View
+     */
+    public function search(string $type, Request $request)
     {
+        $tweets = null;
         switch ($type) {
             case 'guild':
                 $tweets = Tweet::guild();
@@ -26,9 +39,6 @@ class RecruitController extends Controller
             case 'member':
                 $tweets = Tweet::member();
                 break;
-
-            default:
-                $tweets = null;
         }
 
         return view('recruit/search')
