@@ -108,7 +108,7 @@ class Tweet extends Model
                 $pattern = 'ソーサラー|ソサ|本屋|本さん|魔書さん';
                 break;
             case "cleric":
-                $pattern = 'クレリック|(^|^ウ)クレ|ーラー|ヒー.ー|杖屋|杖さん';
+                $pattern = 'クレリック|(^ウ)クレ|ーラー|ヒー.ー|杖屋|杖さん';
                 break;
 
             default:

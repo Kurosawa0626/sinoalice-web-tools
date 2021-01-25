@@ -8,14 +8,14 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Log;
 
-class TweetManage extends Command
+class RecruitTweet extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'tweet:manage';
+    protected $signature = 'recruit:tweet';
 
     /**
      * The console command description.
@@ -46,7 +46,7 @@ class TweetManage extends Command
         $delete_time = (new Carbon())->subWeek();
         Tweet::where('tweeted_at', '<', $delete_time)->delete();
 
-        //
+        // TwitterAPIが最大100件なので100件で分割する
         $chunk_tweets = Tweet::all()->chunk(100);
         foreach ($chunk_tweets as $chunk_tweet) {
             $tweet_ids = array_column($chunk_tweet->toArray(), 'tweet_id');
