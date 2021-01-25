@@ -41,11 +41,17 @@ class RecruitController extends Controller
                 break;
         }
 
+        $tweets->colosseum($request['colosseum'])
+               ->job($request['job'])
+               ->freetext($request['free_text'])
+               ->orderBy('id', 'desc');
+
         return view('recruit/search')
-            ->with('tweets', $tweets->limit(10))
+            ->with('tweets', $tweets->paginate(10))
             ->with('type', $type)
             ->with('time_zone', null)
             ->with('job', null)
-            ->with('free_text', null);
+            ->with('free_text', null)
+            ->with('params', $request);
     }
 }

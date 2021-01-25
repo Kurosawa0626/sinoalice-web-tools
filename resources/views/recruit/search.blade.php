@@ -30,13 +30,13 @@
     </div>
 </header>
 <div style="margin: 0 8px 8px 8px;">
-    <div style="text-align: right;">検索結果：<span style="">{{ $tweets->count() }}件</span>
-        @foreach ($tweets->get() as $tweet)
+    <div style="text-align: right;">検索結果：<span style="">{{ $tweets->total() }}件</span>
+        @foreach ($tweets as $tweet)
         {!! $tweet->html !!}
         @endforeach
         <div style="display: flex; justify-content: center;">
-{{--            <a class="btn-small" href="?colosseum=<?= $timeZone ?>&job=<?= $this->job ?>&freetext=<?= $this->freeText ?>&page=<?= $this->page > 1 ? $this->page - 1 : 1 ?>">Prev</a>--}}
-{{--            <a class="btn-small" href="?colosseum=<?= $timeZone ?>&job=<?= $this->job ?>&freetext=<?= $this->freeText ?>&page=<?= $this->page+1 ?>">Next</a>--}}
+            <a class="btn-small" href="{{ $tweets->appends(['colosseum' => $params['colosseum'], 'job' => $params['job'], 'free_text' => $params['free_text']])->previousPageUrl() }}">Prev</a>
+            <a class="btn-small" href="{{ $tweets->appends(['colosseum' => $params['colosseum'], 'job' => $params['job'], 'free_text' => $params['free_text']])->nextPageUrl() }}">Next</a>
         </div>
 
         <p class="btn-search">
@@ -50,27 +50,27 @@
                 コロシアムの時間帯<br />
                 <select class="form-control" name="colosseum" style="margin-bottom: 10px;">
                     <option value="">時間帯</option>
-                    <option value="08" @if ($time_zone=="08") selected @endif>08:00</option>
-                    <option value="12" @if ($time_zone=="12") selected @endif>12:30</option>
-                    <option value="18" @if ($time_zone=="18") selected @endif>18:00</option>
-                    <option value="19" @if ($time_zone=="19") selected @endif>19:00</option>
-                    <option value="20" @if ($time_zone=="20") selected @endif>20:00</option>
-                    <option value="21" @if ($time_zone=="21") selected @endif>21:00</option>
-                    <option value="22" @if ($time_zone=="22") selected @endif>22:00</option>
-                    <option value="23" @if ($time_zone=="23") selected @endif>23:00</option>
+                    <option value="08" @if ($params['colosseum']=="08") selected @endif>08:00</option>
+                    <option value="12" @if ($params['colosseum']=="12") selected @endif>12:30</option>
+                    <option value="18" @if ($params['colosseum']=="18") selected @endif>18:00</option>
+                    <option value="19" @if ($params['colosseum']=="19") selected @endif>19:00</option>
+                    <option value="20" @if ($params['colosseum']=="20") selected @endif>20:00</option>
+                    <option value="21" @if ($params['colosseum']=="21") selected @endif>21:00</option>
+                    <option value="22" @if ($params['colosseum']=="22") selected @endif>22:00</option>
+                    <option value="23" @if ($params['colosseum']=="23") selected @endif>23:00</option>
                 </select>
 
                 募集ジョブ<br />
                 <select class="form-control" name="job" style="margin-bottom: 10px;">
                     <option value="">募集ジョブ</option>
-                    <option value="attacker" @if ($job=="attacker") selected @endif >前衛</option>
-                    <option value="minstrel" @if ($job=="minstrel") selected @endif >ミンストレル</option>
-                    <option value="sorcerer" @if ($job=="sorcerer") selected @endif >ソーサラー</option>
-                    <option value="cleric"   @if ($job=="cleric")   selected @endif >クレリック</option>
+                    <option value="attacker" @if ($params['job']=="attacker") selected @endif >前衛</option>
+                    <option value="minstrel" @if ($params['job']=="minstrel") selected @endif >ミンストレル</option>
+                    <option value="sorcerer" @if ($params['job']=="sorcerer") selected @endif >ソーサラー</option>
+                    <option value="cleric"   @if ($params['job']=="cleric")   selected @endif >クレリック</option>
                 </select>
 
                 ツイート本文検索（スペースでAND検索）<br>
-                <input class="form-control" name="freeText" style="margin-bottom: 10px;" value="{{ $free_text }}" placeholder="本文検索（スペースでAND検索）" />
+                <input class="form-control" name="free_text" style="margin-bottom: 10px;" value="{{ $params['free_text'] }}" placeholder="本文検索（スペースでAND検索）" />
 
                 <div style="display: flex; justify-content: center;">
                     <a class="btn-small" href="javascript:search.submit()">検索する</a>
