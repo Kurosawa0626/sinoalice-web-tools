@@ -8,11 +8,6 @@ use App\Models\Tweet;
 
 class RecruitController extends Controller
 {
-    public function index()
-    {
-        return 'hoge';
-    }
-
     /**
      * 募集ツイートのIDを保存
      * API制限回避のためここではIDとUserName取得のみ
