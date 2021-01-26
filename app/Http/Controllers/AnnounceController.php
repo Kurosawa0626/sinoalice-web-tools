@@ -12,7 +12,7 @@ class AnnounceController extends Controller
         $data = $announceService->getLocalList($_GET['word'] ?? null);
         return view('announce/index')
             ->with('announces', $data)
-            ->with('word', '');
+            ->with('word', $_GET['word']);
     }
 
     /**
