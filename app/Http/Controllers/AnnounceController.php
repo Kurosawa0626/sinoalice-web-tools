@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 
 class AnnounceController extends Controller
 {
-    public function index(AnnounceService $announceService)
+    public function index(Request $request, AnnounceService $announceService)
     {
-        $data = $announceService->getLocalList($_GET['word'] ?? null);
+        $data = $announceService->getLocalList($request['word'] ?? null);
         return view('announce/index')
             ->with('announces', $data)
-            ->with('word', $_GET['word']);
+            ->with('word', $request['word']);
     }
 
     /**
