@@ -27,7 +27,7 @@ class Tweet extends Model
      * @return mixed
      */
     public function scopeGuild($query) {
-        return $query->where('text', 'like binary', '%シノアリスギルド募集%')
+        return $query->where('text', 'like', '%シノアリスギルド募集%')
             ->where('text', 'not like', '%シノアリスギルメン募集%')
             ->where('text', 'not like', '%シノアリスギルドメンバー募集%');
     }
@@ -38,8 +38,8 @@ class Tweet extends Model
      * @return mixed
      */
     public function scopeMember($query) {
-        return $query->where('text', 'like binary', '%シノアリスギルメン募集%')
-            ->where('text', 'like binary', '%シノアリスギルドメンバー募集%')
+        return $query->where('text', 'like', '%シノアリスギルメン募集%')
+            ->where('text', 'like', '%シノアリスギルドメンバー募集%')
             ->where('text', 'not like', '%シノアリスギルド募集%');
     }
 
