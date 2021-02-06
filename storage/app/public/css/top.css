@@ -1,0 +1,60 @@
+body {
+    background: #333;
+    max-width: 516px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.header-top {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+
+.block-header {
+    background: #fff; padding: 5px 10px; font-size: smaller;
+}
+
+.block-content {
+    padding: 10px; color: #fff; font-size: small;
+}
+
+a.crokuro-btn {
+    background: #555;
+    border: 1px solid #777;
+    border-radius: 3px;
+    text-align: center;
+    width: 40%;
+    height: 30px;
+    line-height: 30px;
+    margin: 20px 10px;
+    font-size: smaller;
+}
+
+a.crokuro-top-btn {
+    background: #555;
+    color: #fff;
+    border: 1px solid #777;
+    border-radius: 3px;
+    text-align: center;
+    width: 40%;
+    height: 50px;
+    line-height: 20px;
+    margin: 20px 10px;
+    font-size: smaller;
+    padding: 5px 0;
+}
+
+p.btn-search {
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: #777 solid 1px;
+    color: #fff;
+    background: #555555;
+}
