@@ -136,6 +136,7 @@ class AnnounceService
 
     /**
      * 差分チェック
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function checkDiff()
     {
@@ -160,7 +161,9 @@ class AnnounceService
                     // 差分あり
                     $localDetail  = $this->getLocalDetail($localValue->id);
                     $remoteDetail = $this->getRemoteDetail($remoteValue->id);
-                    if ($localDetail !== $remoteDetail)
+                    $localText = preg_replace($pattern = '/<script>(.+)<\/script>|<style>(.+)<\/style>/', '', str_replace([" ","　","\r\n","\r","\n"], "", $localDetail ));
+                    $remoteText = preg_replace($pattern = '/<script>(.+)<\/script>|<style>(.+)<\/style>/', '', str_replace([" ","　","\r\n","\r","\n"], "", $remoteDetail ));
+                    if ((new Document())->html($localText)->text() !== (new Document())->html($remoteText)->text())
                     {
                         $update[] = $remoteKey;
                         file_put_contents($this->announceJsonDir.$remoteValue->id.'.json', json_encode(['current' => $remoteDetail]));
