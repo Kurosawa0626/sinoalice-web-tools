@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\AnnounceService;
+use DOMWrap\Document;
 use Illuminate\Http\Request;
 
 class AnnounceController extends Controller
@@ -24,6 +25,12 @@ class AnnounceController extends Controller
     public function detail($id, AnnounceService $announceService)
     {
         $data = $announceService->getLocalDetail($id);
-        return view('announce/detail', ['data' => $data]);
+        $title = (new Document())->html($data)->find('div.announce_text.font_bold.padding_top_10')->text();
+        $thumbnail = (new Document())->html($data)->find('div.banner_area img')->attr('src');
+        if (!file_exists(storage_path('app').'/public/image/announce/ogp/'.basename($thumbnail))) {
+            $img = file_get_contents($thumbnail);
+            file_put_contents(storage_path('app').'/public/image/announce/ogp/'.basename($thumbnail), $img);
+        }
+        return view('announce/detail', ['data' => $data, 'title' => $title, 'thumbnail' => basename($thumbnail)]);
     }
 }
