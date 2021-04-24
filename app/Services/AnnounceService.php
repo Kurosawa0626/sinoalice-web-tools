@@ -4,7 +4,6 @@
 namespace App\Services;
 
 use DOMWrap\Document;
-use DOMWrap\NodeList;
 use GuzzleHttp\Client;
 
 class AnnounceService
@@ -35,8 +34,9 @@ class AnnounceService
      * JSONファイルからお知らせ一覧を取得する
      * @param null $searchWord
      * @return string
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getLocalList($searchWord = null)
+    public function getLocalList($searchWord = null): string
     {
         $announceList = json_decode(file_get_contents($this->announceJsonDir.'/index.json'));
 
@@ -64,7 +64,7 @@ class AnnounceService
      * @return array
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getRemoteList($refresh = false)
+    public function getRemoteList($refresh = false): array
     {
         $node = $this->getRemoteHtml($this->remoteUrl.'/index?type=0');
 
@@ -101,13 +101,16 @@ class AnnounceService
      * JSONファイルからお知らせ詳細のbodyタグ内HTMLを取得する
      * @param int $id
      * @return string
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getLocalDetail($id)
+    public function getLocalDetail(int $id)
     {
         $html = null;
         if (file_exists($this->announceJsonDir.$id.'.json')) {
             $html = json_decode(file_get_contents($this->announceJsonDir.$id.'.json'), true);
             $html = $html['current'];
+            $html = str_replace(['https://webcontents-sinoalice.pokelabo.jp/web/img/alice/common/heading_notes.png','/img/alice/common/heading_notes.png'], $this->replaceImage['heading_notes'], $html);
+            $html = str_replace(['https://webcontents-sinoalice.pokelabo.jp/web/img/alice/common/arrow01.png','/img/alice/common/arrow01.png'], $this->replaceImage['arrow01'], $html);
         } else {
             $html = $this->getRemoteDetail($id, true);
         }
@@ -125,8 +128,8 @@ class AnnounceService
     {
         $html = $this->getRemoteHtml($this->remoteUrl.'/body?announceMstId='.$id)->find('body')->html();
         $html = str_replace('/web/announce/body?announceMstId=', '/announce/detail/', $html);
-        $html = str_replace('/img/alice/common/heading_notes.png', $this->replaceImage['heading_notes'], $html);
-        $html = str_replace('/img/alice/common/arrow01.png', $this->replaceImage['arrow01'], $html);
+        $html = str_replace(['https://webcontents-sinoalice.pokelabo.jp/web/img/alice/common/heading_notes.png','/img/alice/common/heading_notes.png'], $this->replaceImage['heading_notes'], $html);
+        $html = str_replace(['https://webcontents-sinoalice.pokelabo.jp/web/img/alice/common/arrow01.png','/img/alice/common/arrow01.png'], $this->replaceImage['arrow01'], $html);
 
         if ($refresh) {
             file_put_contents($this->announceJsonDir.$id.'.json', json_encode(['current' => $html]));
@@ -138,7 +141,7 @@ class AnnounceService
      * 差分チェック
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function checkDiff()
+    public function checkDiff(): array
     {
         $localAnnounce = $this->getLocalList();
         $remoteAnnounce = $this->getRemoteList(true);
@@ -195,7 +198,7 @@ class AnnounceService
     /**
      * 指定URLのHTML（body直下）を取得
      * @param $url
-     * @return NodeList|string
+     * @return Document|string
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     private function getRemoteHtml($url)
