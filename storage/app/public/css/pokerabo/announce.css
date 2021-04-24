@@ -1,0 +1,711 @@
+/*åŸºæœ¬è¨­å®š*/
+p {
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+}
+pre {
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+.flip-horizontal {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+}
+
+.opacity_05 {
+    opacity: 0.5;
+}
+
+
+/* index.tpl */
+/* ã‚¿ãƒ– */
+.tab_button_area {
+    background-color: #000;
+}
+.tab_button_area a {
+    font-size: 11px;
+    letter-spacing: -0.02em;
+}
+.tab_off {
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.tab_on {
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.tab_text {
+    padding-top: 14px;
+    text-shadow: -1px -1px 1px #27140c;
+}
+.tab_on .tab_text {
+    color: #E0D8CB;
+}
+.tab_off .tab_text {
+    color: #887D67;
+}
+
+/* ãƒãƒŠãƒ¼ã‚¨ãƒªã‚¢ */
+.banner_area {
+    width: 305px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+/*ã‚¢ã‚¤ã‚³ãƒ³å‘¨ã‚Š*/
+.icon_new {
+    position: absolute;
+    top: -7px;
+    left: 12px;
+}
+.category_icon {
+    position: absolute;
+    top: -4px;
+    left: -6px;
+}
+
+/* body.tpl */
+.sub_heading {
+    height: 100%;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/common/heading_icon01.png');
+    background-repeat: repeat-y;
+    -webkit-background-size: 3px 17px;
+    background-size: 3px 17px;
+    background-position: 0 0;
+    padding-left: 10px;
+    margin-bottom: 2px;
+    line-height: 1.2em;
+    font-size: 14px;
+    font-weight: bold;
+}
+.announce_date {
+    width: 120px;
+    height: 24px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/line/line02.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 120px 5px;
+    background-size: 120px 5px;
+    background-position: bottom center;
+    line-height: 24px;
+    text-align: center;
+}
+
+.line01 {
+    width: 340px;
+    height: 5px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/line/line01.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.grey_frame {
+    background-color: #26221c;
+    border-radius: 5px;
+}
+
+/* å ±é…¬éƒ¨åˆ† */
+.reward_list {
+    width: 335px;
+    height: 135px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/commonFrame/status01.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    font-size: 12px;
+}
+.reward_list img{
+    display: block;
+}
+.reward_list_item {
+    width: 335px;
+    height: 110px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/commonFrame/status02.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    font-size: 12px;
+}
+.reward_list_set_top {
+    width: 335px;
+    height: 125px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/commonFrame/status03.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    margin: 0 auto;
+    font-size: 12px;
+}
+.reward_list_set_middle {
+    width: 335px;
+    height: auto;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/commonFrame/status03_middle.png');
+    background-repeat: repeat-y;
+    background-position: center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    font-size: 12px;
+}
+.reward_list_set_bottom {
+    width: 335px;
+    height: 122px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/commonFrame/status03.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    margin: 0 auto;
+    font-size: 12px;
+}
+.reward_list_set_top img,
+.reward_list_set_bottom img
+{
+    display: block;
+}
+
+/* å ±é…¬ã‚¿ã‚¤ãƒˆãƒ« */
+.reward_name {
+    width: 230px;
+    background-image: url(https://webcontents-sinoalice.pokelabo.jp/web/img/alice/common/name.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 217px 8px;
+    background-size: 217px 8px;
+    background-position: center 13px;
+    height: 22px;
+    line-height: 22px;
+}
+.reward_name img {
+    display: block;
+}
+
+.reward_name_with_job {
+    width: 310px;
+    background-image: url(https://webcontents-sinoalice.pokelabo.jp/web/img/alice/common/name.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 217px 8px;
+    background-size: 217px 8px;
+    background-position: 100px 13px;
+    height: 22px;
+    line-height: 22px;
+}
+.reward_name_with_job img {
+    display: block;
+}
+.reward_name_chara_popup {
+    background-position: 15px 13px;
+}
+
+.reward_name_item {
+    background-position: 6px 13px;
+    width: 248px;
+}
+
+.reward_name_2lines {
+    width: 230px;
+    background-image: url(https://webcontents-sinoalice.pokelabo.jp/web/img/alice/common/name.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 217px 8px;
+    background-size: 217px 8px;
+    background-position: center 13px;
+    min-height: 22px;
+}
+
+/* ã‚¢ã‚¤ã‚³ãƒ³ */
+.icon_bg {
+    width: 66px;
+    height: 66px;
+    position: relative;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/background/icon.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.icon_bg .icon {
+    display: block;
+    position: absolute;
+    top: 1.5px;
+    left: 1.5px;
+}
+.icon_bg .rarity {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left:0;
+}
+.icon_bg_nightmare {
+    width: 312px;
+    height: 173px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/background/detail.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: 301px 160px;
+    background-size: 301px 160px;
+    background-position: center 13px;
+}
+
+/* ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹è¡¨ç¤º */
+.status_name {
+    height: 20px;
+    width:40px;
+    background-color: #7c6e5d;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    text-align: center;
+    line-height: 20px;
+}
+.status_value {
+    width: 64px;
+    height: 20px;
+    background-color: #d3c4bb;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    text-align: right;
+    line-height: 20px;
+    padding-right: 8px;
+}
+
+.status_icon {
+    height: 20px;
+    background-color: #d3c4bb;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 0 4px;
+}
+
+/* ã‚¹ã‚­ãƒ«è¡¨ç¤º */
+.skill_text {
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1) inset;
+    border: 1px solid #c1afa5;
+    border-radius: 4px;
+    width: 225px;
+    line-height: 20px;
+    background-color: #eadcd3;
+    padding: 0 5px;
+}
+
+.skill_text_detail {
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1) inset;
+    border: 1px solid #c1afa5;
+    border-radius: 4px;
+    line-height: 16px;
+    background-color: #eadcd3;
+    padding: 5px;
+    margin: 5px auto 0;
+}
+.skill_detail {
+    width: 305px;
+    margin: 5px auto 0;
+}
+.skill_name_quest {
+    width: 195px;
+    height: 20px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/background/battle_skill_name01.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-position: center left ;
+    padding-left: 110px;
+    line-height: 20px;
+    margin: 5px auto 0;
+}
+
+.skill_name_quest2 {
+    width: 195px;
+    height: 20px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/background/battle_skill_name02.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-position: center left ;
+    padding-left: 110px;
+    line-height: 20px;
+    margin: 5px auto 0;
+}
+.skill_name_gvg {
+    width: 195px;
+    height: 20px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/background/battle_skill_name03.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-position: center left ;
+    padding-left: 110px;
+    line-height: 20px;
+    margin: 5px auto 0;
+}
+.skill_name_gvg2 {
+    width: 195px;
+    height: 20px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/background/battle_skill_name04.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-position: center left ;
+    padding-left: 110px;
+    line-height: 20px;
+    margin: 5px auto 0;
+}
+.skill_name_limit_break {
+    width: 195px;
+    height: 20px;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-position: center left ;
+    padding-left: 110px;
+    line-height: 20px;
+    margin: 5px auto 0;
+}
+
+.set_effect_card {
+    width: 150px;
+    background-color: #d3c4bb;
+    border-radius: 3px;
+    padding: 3px 0 3px 5px;
+}
+.item_text {
+    width: 230px;
+    height: 50px;
+    line-height: 17px;
+}
+.caution {
+    color: #bc3224;
+    padding: 10px 0;
+    letter-spacing: 0.01em;
+    line-height: 1.3em;
+}
+.caution_popup {
+    color: #bc3224;
+    padding: 10px 0 46px;
+    letter-spacing: 0.01em;
+    line-height: 1.3em;
+}
+/* popupé–¢é€£ */
+.popup_frame img{
+    display: block;
+}
+.popup_chara_back,
+.popup_card_back {
+    bottom: 10px;
+    left: -30px;
+    position: fixed;
+    z-index: 100;
+}
+
+/* å¹…èª¿æ•´ */
+.width_50 {
+    width: 50px;
+}
+.width_40 {
+    width: 40px;
+}
+.width_60 {
+    width: 60px;
+}
+.width_84 {
+    width: 84px;
+}
+.width_105 {
+    width: 105px;
+ }
+.width_130 {
+    width: 130px;
+}
+.width_330 {
+    width: 330px;
+}
+.width_335 {
+    width: 335px;
+}
+.width_342 {
+    width: 342px;
+}
+
+/* fixè¡¨ç¤º */
+.fixed_button_area {
+    bottom: 10px;
+    left: -30px;
+    position: fixed;
+    z-index: 100;
+}
+.fixed_gradient_top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 18px;
+    position: fixed;
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.4) 30%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.4) 30%,rgba(0,0,0,0) 100%);
+}
+.fixed_gradient_bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 18px;
+    position: fixed;
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0.8) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0.8) 100%);
+}
+
+/* BOSSæ”»ç•¥æƒ…å ± */
+.boss_name {
+    background-image: url(https://webcontents-sinoalice.pokelabo.jp/web/img/alice/common/name.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 217px 8px;
+    background-size: 217px 8px;
+    background-position: left 14px;
+    height: 22px;
+    line-height: 22px;
+}
+.boss_name img {
+    display: block;
+}
+.boss_img {
+    width: 180px;
+    display: block;
+}
+.boss_status {
+    border-bottom: solid 1px #E0D8CB;
+    padding-right: 5px;
+}
+.boss_status_name {
+    background-color: #6e6650;
+    border-radius: 5px;
+    padding: 2px 6px;
+}
+.boss_status_value {
+    letter-spacing: 0.1em;
+}
+
+/* landing */
+.landing img {
+    display: block;
+}
+.landing_top {
+    position: relative;
+    width: 100%;
+    height: 580px;
+}
+.top_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.landing_top .title001 {
+    position: absolute;
+    top: 304px;
+    left: 0;
+    display: block;
+}
+.landing_top .contents001 {
+    position: absolute;
+    top: 364px;
+    left: 0;
+    display: block;
+}
+.beige_bg {
+    background-color: #e8dfd6;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 5px;
+}
+/* ãƒ‘ãƒãƒ« */
+.panel_title {
+    color: #d8bb56;
+    text-decoration: underline;
+}
+
+/* Jobä»˜ãæ­¦å™¨ ãƒ†ã‚­ã‚¹ãƒˆãƒœãƒƒã‚¯ã‚¹ */
+.text_box {
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1) inset;
+    border: 1px solid #c1afa5;
+    border-radius: 4px;
+    width: 292px;
+    line-height: 20px;
+    background-color: #eadcd3;
+    padding: 0 5px;
+}
+
+.info_title001 {
+    width: 335px;
+    height: 48px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/background/info_title_background001.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    padding-top: 2px;
+    text-shadow: 0 0 2px #000;
+}
+
+.info_title002 {
+    width: 335px;
+    height: 36px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/background/info_title_background002.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    padding-top: 2px;
+    text-shadow: 0 0 2px #000;
+}
+.info_title002 p{
+    width:288px;
+}
+
+/* ã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«è¡¨ */
+.list_table {
+    width: 100%;
+    color: #382F28;
+    border-collapse: separate;
+    border-spacing: 0 1.5px;
+    text-align: center;
+    line-height: 1.8em;
+}
+.list_table caption {
+    color: #E0D8CB;
+    background-color: #3B3327;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+    line-height: 1.8em;
+    padding: 4px 2px;
+}
+.list_table th {
+    width: 130px;
+    background-color: #A69D8D;
+    text-align: center;
+    line-height: 1.8em;
+    padding: 4px 2px;
+}
+.list_table td {
+    background-color: #BEB7AA;
+    text-align: center;
+    line-height: 1.8em;
+    padding: 4px 2px;
+}
+.list_table tr:last-child th {
+    border-bottom-left-radius: 5px;
+}
+
+/* ãƒ†ãƒ¼ãƒ–ãƒ«ã®CSS */
+.list_table tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+}
+.event_title {
+    line-height: 1.8em;
+    padding: 3px;
+}
+.event_title ~ td {
+    line-height: 1.8em;
+    padding: 4px 2px;
+}
+caption, td, th {
+  line-height: 1.8em !important;
+    padding: 4px 2px;
+}
+
+/* ãƒšãƒ¼ã‚¸å†…ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ« */
+.scroll_from {
+    display: -webkit-inline-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+.scroll_from::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 27px;
+    background-image: url(https://webcontents-sinoalice.pokelabo.jp/web/img/alice/button/button_black002_size03_left.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-position: 0 0;
+}
+.scroll_from div {
+    width: auto;
+    height: 27px;
+    background-image: url(https://webcontents-sinoalice.pokelabo.jp/web/img/alice/button/button_black002_size03_middle.png);
+    background-repeat: repeat-x;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    text-shadow: -1px -1px 1px #21120b;
+}
+.scroll_from::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 27px;
+    background-image: url(https://webcontents-sinoalice.pokelabo.jp/web/img/alice/button/button_black002_size03_right.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-position: 0 0;
+}
+
+ /*è©³ç´°ãƒœã‚¿ãƒ³*/
+.button_detail {
+    width: 55px;
+    height: 23px;
+    background-color: #3b3632;
+    border-radius: 15px;
+    border: solid 2px #706857;
+}
+
+.time_left_bg {
+    background-image: url(https://webcontents-sinoalice.pokelabo.jp/web/img/alice/common/name.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 200px 9px;
+    background-size: 200px 9px;
+    background-position: 10px 4px;
+    height: 21px;
+}
+/* iOSå¥èª­ç‚¹æ”¹è¡Œå¯¾å¿œ */
+.word_break_normal {
+    word-break: normal;
+}
+
+/* ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³å¿œå‹Ÿãƒœã‚¿ãƒ³ */
+.orange_button01 {
+    width: 92px;
+    height: 32px;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    text-shadow: -1px -1px 1px #f2f0e9;
+}
+
+
+/* ã‚¸ãƒ§ãƒ–ã‚¹ã‚­ãƒ«ä¸€è¦§è¡¨ç¤º */
+.ability_table {
+  color: #ece7db;
+  border-collapse: separate;
+  border-spacing: 0px 8px;
+}
+.ability_table th {
+  text-align: center;
+  line-height: 1.5em !important;
+  padding: 0;
+}
+.ability_table th.left {
+  width: 64px;
+  border-radius: 6px 0 0 6px;
+}
+.ability_table th.right {
+  border-radius: 0 6px 6px 0;
+  width: 64px;
+  background-color: #766c5a;
+}
+.ability_table td {
+  padding: 0px 4px;
+  line-height: 1.5em !important;
+  background-color: #000000;
+  text-align: left;
+}

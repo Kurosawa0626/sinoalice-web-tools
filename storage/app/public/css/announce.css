@@ -1,0 +1,11 @@
+body {
+    background-color: #000;
+}
+
+input {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: content-box;
+}

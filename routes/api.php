@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('/recruit/tweet', 'App\Http\Controllers\Api\RecruitController@store');
+Route::get('/announce/diff', 'App\Http\Controllers\Api\AnnounceController@diff');
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+//    return $request->user();
+//});

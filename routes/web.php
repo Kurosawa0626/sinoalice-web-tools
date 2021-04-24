@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('announce', 'App\Http\Controllers\AnnounceController@index');
+Route::get('announce/detail/{id}', 'App\Http\Controllers\AnnounceController@detail');
+
+Route::get('recruit', 'App\Http\Controllers\RecruitController@index');
+Route::get('recruit/search/{type}', 'App\Http\Controllers\RecruitController@search');
