@@ -1,4 +1,4 @@
-/*åŸºæœ¬è¨­å®š*/
+/*基本設定*/
 p {
     word-wrap: break-word;
     word-break: break-all;
@@ -20,7 +20,7 @@ pre {
 
 
 /* index.tpl */
-/* ã‚¿ãƒ– */
+/* タブ */
 .tab_button_area {
     background-color: #000;
 }
@@ -50,14 +50,14 @@ pre {
     color: #887D67;
 }
 
-/* ãƒãƒŠãƒ¼ã‚¨ãƒªã‚¢ */
+/* バナーエリア */
 .banner_area {
     width: 305px;
     margin: 0 auto;
     padding-top: 10px;
 }
 
-/*ã‚¢ã‚¤ã‚³ãƒ³å‘¨ã‚Š*/
+/*アイコン周り*/
 .icon_new {
     position: absolute;
     top: -7px;
@@ -109,7 +109,7 @@ pre {
     border-radius: 5px;
 }
 
-/* å ±é…¬éƒ¨åˆ† */
+/* 報酬部分 */
 .reward_list {
     width: 335px;
     height: 135px;
@@ -172,7 +172,7 @@ pre {
     display: block;
 }
 
-/* å ±é…¬ã‚¿ã‚¤ãƒˆãƒ« */
+/* 報酬タイトル */
 .reward_name {
     width: 230px;
     background-image: url(https://webcontents-sinoalice.pokelabo.jp/web/img/alice/common/name.png);
@@ -219,7 +219,7 @@ pre {
     min-height: 22px;
 }
 
-/* ã‚¢ã‚¤ã‚³ãƒ³ */
+/* アイコン */
 .icon_bg {
     width: 66px;
     height: 66px;
@@ -251,7 +251,7 @@ pre {
     background-position: center 13px;
 }
 
-/* ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹è¡¨ç¤º */
+/* ステータス表示 */
 .status_name {
     height: 20px;
     width:40px;
@@ -280,7 +280,7 @@ pre {
     padding: 0 4px;
 }
 
-/* ã‚¹ã‚­ãƒ«è¡¨ç¤º */
+/* スキル表示 */
 .skill_text {
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1) inset;
     border: 1px solid #c1afa5;
@@ -364,6 +364,18 @@ pre {
     line-height: 20px;
     margin: 5px auto 0;
 }
+.skill_name_limit_break_nightmare {
+    width: 195px;
+    height: 20px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/background/battle_skill_name05.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-position: center left ;
+    padding-left: 110px;
+    line-height: 20px;
+    margin: 5px auto 0;
+}
 
 .set_effect_card {
     width: 150px;
@@ -388,7 +400,7 @@ pre {
     letter-spacing: 0.01em;
     line-height: 1.3em;
 }
-/* popupé–¢é€£ */
+/* popup関連 */
 .popup_frame img{
     display: block;
 }
@@ -400,7 +412,7 @@ pre {
     z-index: 100;
 }
 
-/* å¹…èª¿æ•´ */
+/* 幅調整 */
 .width_50 {
     width: 50px;
 }
@@ -429,7 +441,7 @@ pre {
     width: 342px;
 }
 
-/* fixè¡¨ç¤º */
+/* fix表示 */
 .fixed_button_area {
     bottom: 10px;
     left: -30px;
@@ -455,7 +467,7 @@ pre {
     background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0.8) 100%);
 }
 
-/* BOSSæ”»ç•¥æƒ…å ± */
+/* BOSS攻略情報 */
 .boss_name {
     background-image: url(https://webcontents-sinoalice.pokelabo.jp/web/img/alice/common/name.png);
     background-repeat: no-repeat;
@@ -517,13 +529,13 @@ pre {
     margin-right: 10px;
     padding: 10px 5px;
 }
-/* ãƒ‘ãƒãƒ« */
+/* パネル */
 .panel_title {
     color: #d8bb56;
     text-decoration: underline;
 }
 
-/* Jobä»˜ãæ­¦å™¨ ãƒ†ã‚­ã‚¹ãƒˆãƒœãƒƒã‚¯ã‚¹ */
+/* Job付き武器 テキストボックス */
 .text_box {
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1) inset;
     border: 1px solid #c1afa5;
@@ -559,7 +571,7 @@ pre {
     width:288px;
 }
 
-/* ã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«è¡¨ */
+/* スケジュール表 */
 .list_table {
     width: 100%;
     color: #382F28;
@@ -594,7 +606,7 @@ pre {
     border-bottom-left-radius: 5px;
 }
 
-/* ãƒ†ãƒ¼ãƒ–ãƒ«ã®CSS */
+/* テーブルのCSS */
 .list_table tr:last-child td:last-child {
     border-bottom-right-radius: 5px;
 }
@@ -611,7 +623,7 @@ caption, td, th {
     padding: 4px 2px;
 }
 
-/* ãƒšãƒ¼ã‚¸å†…ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ« */
+/* ページ内スクロール */
 .scroll_from {
     display: -webkit-inline-box;
     -webkit-box-pack: center;
@@ -650,7 +662,7 @@ caption, td, th {
     background-position: 0 0;
 }
 
- /*è©³ç´°ãƒœã‚¿ãƒ³*/
+ /*詳細ボタン*/
 .button_detail {
     width: 55px;
     height: 23px;
@@ -667,12 +679,12 @@ caption, td, th {
     background-position: 10px 4px;
     height: 21px;
 }
-/* iOSå¥èª­ç‚¹æ”¹è¡Œå¯¾å¿œ */
+/* iOS句読点改行対応 */
 .word_break_normal {
     word-break: normal;
 }
 
-/* ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³å¿œå‹Ÿãƒœã‚¿ãƒ³ */
+/* キャンペーン応募ボタン */
 .orange_button01 {
     width: 92px;
     height: 32px;
@@ -683,7 +695,7 @@ caption, td, th {
 }
 
 
-/* ã‚¸ãƒ§ãƒ–ã‚¹ã‚­ãƒ«ä¸€è¦§è¡¨ç¤º */
+/* ジョブスキル一覧表示 */
 .ability_table {
   color: #ece7db;
   border-collapse: separate;

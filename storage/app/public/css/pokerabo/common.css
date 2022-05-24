@@ -27,7 +27,13 @@ body {
     font-size: 14px;
     -webkit-user-select: none;
     user-select: none;
-    -webkit-touch-callout: none;
+}
+
+/*リンク、画像に対してドラッグ操作を無効にする*/
+a, img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
 }
 
 /*BOXレイアウト関連*/
@@ -56,10 +62,10 @@ body {
     -webkit-box-align: center;
 }
 .box_center_start {
-    display: -webkit-box;
-    display: -moz-box;
-    -webkit-box-pack: center;
-    -webkit-box-align: start;
+  display: -webkit-box;
+  display: -moz-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: start;
 }
 
 .orient_vertical {
@@ -127,16 +133,16 @@ body {
     line-height: 29px;
 }
 .button02_4 {
-    width: 198px;
-    height: 30px;
-    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/button/button02_4.png');
-    background-repeat: no-repeat;
-    -webkit-background-size: 100% 100%;
-    background-size: 100% 100%;
-    text-shadow: -1px -1px 1px #21120b;
+  width: 198px;
+  height: 30px;
+  background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/button/button02_4.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  text-shadow: -1px -1px 1px #21120b;
 }
 .button02_4 p{
-    line-height: 29px;
+  line-height: 29px;
 }
 .button03 {
     width: 63px;
@@ -255,6 +261,34 @@ body {
     -webkit-background-size: 100% auto;
     background-size: 100% auto;
 }
+
+.frame_top_3 {
+    width: 352px;
+    height: 14px;
+    padding-top: 14px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/commonFrame/list_frame_top.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    position: relative;
+}
+.frame_middle_3 {
+    width: 352px;
+    height: auto;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/commonFrame/list_frame_middle.png');
+    background-repeat: repeat-y;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.frame_bottom_3 {
+    width: 352px;
+    height: 20px;
+    background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/commonFrame/list_frame_bottom.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+}
+
 .popup_frame {
     width:342px;
     background-image: url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/commonFrame/popup_frame_top.png'), url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/commonFrame/popup_frame_bottom.png'), url('https://webcontents-sinoalice.pokelabo.jp/web/img/alice/commonFrame/popup_frame_middle.png');
@@ -356,7 +390,7 @@ a.text_link {
 
 /*テキスト影*/
 .text_shadow {
-    text-shadow: 1px 1px 1px #f2f0e9;
+     text-shadow: 1px 1px 1px #f2f0e9;
 }
 .text_shadow_dark {
     text-shadow: 1px 1px 1px #000;
@@ -570,9 +604,15 @@ a.text_link {
 }
 .padding_left_10 {
     padding-left: 10px;
-}
+ }
 .padding_left_20 {
     padding-left: 20px;
+}
+.padding_left_30 {
+    padding-left: 30px;
+}
+.padding_left_40 {
+    padding-left: 40px;
 }
 .padding_right_5 {
     padding-right: 5px;
