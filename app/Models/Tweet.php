@@ -38,9 +38,11 @@ class Tweet extends Model
      * @return mixed
      */
     public function scopeMember($query) {
-        return $query->where('text', 'like', '%シノアリスギルメン募集%')
-            ->where('text', 'like', '%シノアリスギルドメンバー募集%')
-            ->where('text', 'not like', '%シノアリスギルド募集%');
+        $query->where(function($query) {
+            $query->where('text', 'like', '%シノアリスギルメン募集%')
+                  ->orWhere('text', 'like', '%シノアリスギルドメンバー募集%');
+        });
+        return $query->where('text', 'not like', '%シノアリスギルド募集%');
     }
 
     /**
