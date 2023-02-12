@@ -18,6 +18,8 @@ class TwitterStoreRequest extends FormRequest
         return [
             'id' => 'required|integer',
             'username' => 'required|string',
+            'text' => 'required|string',
+            'tweeted_at' => 'required'
         ];
     }
 

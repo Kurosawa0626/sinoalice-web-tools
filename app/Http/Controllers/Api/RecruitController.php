@@ -18,8 +18,10 @@ class RecruitController extends Controller
     {
         try {
             Tweet::create([
-                'tweet_id' => $request['id'],
-                'username' => $request['username']
+                'tweet_id'   => $request['id'],
+                'username'   => $request['username'],
+                'text'       => $request['text'],
+                'tweeted_at' => $request['tweeted_at']
             ]);
         } catch (\Exception $e) {
             return json_encode(['result' => 'failed']);

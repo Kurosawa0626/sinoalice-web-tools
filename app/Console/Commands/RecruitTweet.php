@@ -83,9 +83,7 @@ class RecruitTweet extends Command
                         curl_close($curl);
 
                         $tweet->fill([
-                            'text' => $data->text,
-                            'html' => json_decode($response)->html,
-                            'tweeted_at' => $data->created_at,
+                            'html' => json_decode($response)->html
                         ])->save();
                     }
                 }
